@@ -4,7 +4,7 @@
 #include <unistd.h>
 
 /* libspiff routines for C */
-#include <xspf_c.h>
+#include <spiff/spiff_c.h>
 
 int
 main (int argc, char **argv)
