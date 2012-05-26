@@ -16,5 +16,15 @@ main (int argc, char **argv)
     playlist = spiff_parse(SAMPLE_PLAYLIST, "http://frottage.org");
     printf("pl=%p\n", playlist);
 
+    if (playlist) { /* we might have tracks */
+        int i = 0;
+        for(struct spiff_track *t = playlist->tracks; t; t = t->next) {
+            i = i + 1;
+            printf("%3d %-30s %-30s %-30s\n", i, t->creator, t->album, t->title);
+        }
+        printf("pl has %d tracks\n", i);
+    }
+
+
     return 0;
 } 
