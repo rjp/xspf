@@ -1,2 +1,2 @@
 CFLAGS="-g -I/opt/local/include"
-LDFLAGS="-L/opt/local/lib"
+LDFLAGS="-L/opt/local/lib -lspiff"
